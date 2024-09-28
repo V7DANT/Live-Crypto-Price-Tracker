@@ -1,0 +1,234 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    min-height: 100vh;
+}
+
+
+.container 
+{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.main-header 
+{
+    background-color: black;
+    color: white;
+    padding: 0.75rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-right: 2rem;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+    color: rgb(167, 167, 235);
+}
+
+.search {
+    display: inline-block;
+    position: relative;
+}
+
+.search input[type="text"] {
+    width: 200px;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    background-color: white;
+    color: black;
+}
+
+.search button[type="submit"] {
+    background-color: white;
+    border: none;
+    color: black;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: .9s ease;
+}
+
+.search button[type="submit"]:hover {
+    transform: scale(1.1);
+    color: white;
+    background-color: black;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+main {
+    padding: 2rem 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    width: 100%;
+    max-width: 1200px; /* Adjust as needed */
+    margin: 0 auto;
+}
+
+.news-page-title {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-top: -0.1rem;
+    margin-bottom: 2.5rem;
+    align-self: flex-start; /* Align title to the left */
+    margin-left: 1rem; /* Add some left margin */
+}
+
+.news-section {
+    width: 100%;
+    max-width: 800px; /* Adjust this value as needed */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Rest of your existing styles */
+.news-item {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: flex-start;
+    color: #e0e0e0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+.news-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+.news-image {
+    width: 250px; /* Increased width */
+    height: 200px; /* Increased height */
+    object-fit: cover;
+    border-radius: 6px;
+    margin-right: 1.5rem;
+    align-self: flex-start; /* Align to the top */
+}
+
+.news-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribute content vertically */
+    min-height: 200px; /* Match the image height */
+}
+
+.news-title {
+    margin: 0 0 0.75rem 0;
+    font-size: 1.4em;
+    font-weight: 600;
+    color: #ffffff;
+    line-height: 1.3;
+}
+
+.news-description {
+    margin-bottom: 1rem;
+    font-size: 1em;
+    line-height: 1.5;
+    flex-grow: 1; /* Allow description to grow and fill space */
+}
+
+.news-meta, .news-date {
+    font-size: 0.9em;
+    color: #b0b0b0;
+    margin-bottom: 0.5rem;
+}
+
+.news-link {
+    color: #4a90e2;
+    text-decoration: none;
+    font-size: 0.95em;
+    font-weight: 500;
+    align-self: flex-start;
+    transition: color 0.2s ease;
+}
+
+.news-link:hover {
+    color: #64a6f3;
+    text-decoration: underline;
+}
+
+.news-section {
+    margin-bottom: 3rem;
+}
+
+.news-section h2 {
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #333;
+}
+
+.news-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+
+/* logo */
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    max-height: 50px; /* Adjust this value to fit your design */
+    width: auto;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 0.9rem;
+}

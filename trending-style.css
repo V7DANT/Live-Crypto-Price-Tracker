@@ -1,0 +1,231 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* header */
+
+.main-header 
+{
+    background-color: black;
+    color: white;
+    padding: 0.75rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-right: 2rem;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+    color: rgb(167, 167, 235);
+}
+
+.search {
+    display: inline-block;
+    position: relative;
+}
+
+.search input[type="text"] {
+    width: 200px;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    background-color: white;
+    color: black;
+}
+
+.search button[type="submit"] {
+    background-color: white;
+    border: none;
+    color: black;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: .9s ease;
+}
+
+.search button[type="submit"]:hover {
+    transform: scale(1.1);
+    color: white;
+    background-color: black;
+}
+
+main {
+    padding: 2rem 0;
+    flex: 1;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: white;
+    margin-left: 10.5%; /* Align with the first column of the table */
+    margin-top: 30px;
+}
+
+/* Crypto Table */
+.crypto-table-container {
+    margin: 2rem auto;
+    overflow-x: auto;
+    max-width: 95%; /* Increase the maximum width */
+    width: 1200px; /* Increase the fixed width */
+}
+
+.crypto-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: black;
+    color: #ffffff;
+    font-size: 0.9rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.crypto-table th,
+.crypto-table td {
+    padding: 1rem; 
+    text-align: left; 
+    vertical-align: middle;
+    border-bottom: 1px solid #333;
+}
+
+.crypto-table th {
+    background-color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+}
+
+.crypto-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.crypto-table tbody tr:hover {
+    background-color: #252525;
+}
+
+.crypto-table th:first-child,
+.crypto-table td:first-child {
+    width: 5%;
+}
+
+.crypto-table th:nth-child(2),
+.crypto-table td:nth-child(2) {
+    width: 20%; /* Slightly reduce to accommodate other columns */
+}
+
+.crypto-table th:nth-child(3),
+.crypto-table td:nth-child(3),
+.crypto-table th:nth-child(4),
+.crypto-table td:nth-child(4),
+.crypto-table th:nth-child(5),
+.crypto-table td:nth-child(5),
+.crypto-table th:nth-child(6),
+.crypto-table td:nth-child(6) {
+    width: 15%;
+}
+
+.crypto-table th:last-child,
+.crypto-table td:last-child {
+    width: 15%; 
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .crypto-table-container {
+        width: 95%;
+    }
+}
+
+@media (max-width: 992px) {
+    .crypto-table-container {
+        width: 100%;
+    }
+}
+
+.crypto-table td:nth-child(2) img {
+    vertical-align: middle;
+    position: relative;
+    top: -2px; 
+}
+
+.crypto-table th:nth-child(4),
+.crypto-table td:nth-child(4) {
+    text-align: left; 
+    padding-left:2rem; 
+}
+
+.crypto-table th:nth-child(3),
+.crypto-table td:nth-child(3) {
+    text-align: left; 
+    padding-left: 4rem; 
+}
+
+.crypto-table td:nth-child(2) {
+    white-space: nowrap;
+}
+
+/* footer */
+footer {
+    background-color: black;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+/* logo */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    max-height: 50px; 
+    width: auto;
+}

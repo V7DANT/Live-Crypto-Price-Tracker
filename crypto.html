@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Details</title>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="images/logo_2-removebg-preview.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/logo_2-removebg-preview.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/logo_2-removebg-preview.png">
+
+    <link rel="stylesheet" href="crypto-style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo_2.png" alt="Crypto Price Tracker Logo" class="logo-image" id="website-logo">
+            </div>
+            <nav class="nav-links">
+                <a href="#" id="home-tab">Home</a>
+                <a href="#" id="trending-tab">Trending</a>
+                <a href="#" id="news-tab">News</a>
+                <a href="#" id="watchlist-tab">Watchlist</a>
+                <a href="#" id="about-tab">About</a>
+            </nav>
+            <div class="search">
+                <form id="search-form">
+                    <input id="search-input" placeholder="Search..." type="text">
+                    <button type="submit">Go</button>
+                </form>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div id="cryptoInfo">
+            <div class="crypto-header">
+                <div class="crypto-title">
+                    <h1 id="crypto-header">
+                        <img id="crypto-image" src="" alt="Cryptocurrency logo">
+                        <span id="crypto-name-symbol"></span>
+                    </h1>
+                    <h2 id="price">$0.00</h2>
+                </div>
+            </div>
+            <div class="graph">
+                <canvas id="cryptoChart" width="1000" height="500"></canvas>
+            </div>
+            <div class="crypto-container">
+                <div class="crypto-section">
+                    <h2>Real Time Parameters</h2>
+                    <div class="crypto-stock-table" id="real-time">
+                    </div>
+                </div>
+                <div class="crypto-section">
+                    <h2>Historical Data</h2>
+                    <div class="crypto-stock-table" id="historical-data">
+                    </div>
+                </div>
+                <div class="crypto-section">
+                    <h2>Info</h2>
+                    <div class="crypto-stock-table" id="info-data">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h2>Live Trades</h2>
+        <div class="crypto-table-container">
+            <table id="cryptoTable" class="crypto-table">
+                <thead>
+                    <tr>
+                        <th>Sr No.</th>
+                        <th>Target</th>
+                        <th>Market</th>
+                        <th>Price</th>
+                        <th>Volume</th>
+                        <th>Spread</th>
+                        <th>Trust</th>
+                        <th>Timestamp</th>
+                        <th>Trade Incentive</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                </tbody>
+            </table>
+        </div>
+        <div class="news">
+            <h2>Crypto News</h2>
+            <div class="news-slider">
+                <button class="slider-arrow left-arrow">&lt;</button>
+                <div class="news-container">
+                    <div class="news-articles" id="news-box">
+                    </div>
+                </div>
+                <button class="slider-arrow right-arrow">&gt;</button>
+            </div>
+        </div>
+        <div class="about-container">
+        <h2>About:</h2>
+        <p id="crypto-description"></p>
+    </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 CryptoTracker | All Rights Reserved</p>
+        </div>
+    </footer>
+    <script src="config.js"></script>
+    <script src="crypto-script.js"></script>
+</body>
+
+</html>

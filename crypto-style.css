@@ -1,0 +1,521 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    min-height: 100vh;
+}
+
+.container 
+{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.main-header 
+{
+    background-color: black;
+    color: white;
+    padding: 0.75rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-right: 2rem;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+    color: rgb(167, 167, 235);
+}
+
+/* Search Styles */
+.search {
+    display: inline-block;
+    position: relative;
+}
+
+.search input[type="text"] {
+    width: 200px;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    background-color: white;
+    color: black;
+}
+
+.search button[type="submit"] {
+    background-color: white;
+    border: none;
+    color: black;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: .9s ease;
+}
+
+.search button[type="submit"]:hover {
+    transform: scale(1.1);
+    color: white;
+    background-color: black;
+}
+
+/* Bitcoin Chart */
+#cryptoChart {
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+/* Crypto Container */
+.crypto-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.crypto-section {
+    flex: 1;
+    background-color: #222222;
+    border-radius: 10px;
+    padding: 1.5rem;
+    overflow: hidden;
+}
+
+/* Crypto Stock Table */
+.crypto-stock-table {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.crypto-row {
+    background-color: #2c2c2c;
+    border-radius: 5px;
+    padding: 0.75rem 1rem;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.crypto-row:hover {
+    background-color: #3c3c3c;
+    transform: translateY(-2px);
+}
+
+.crypto-row-label {
+    color: #8c8c8c;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    margin-right: 0.5rem;
+}
+
+.crypto-row-value {
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-align: right;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Crypto Table */
+.crypto-table-container {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    overflow-x: auto;
+}
+
+.crypto-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-size: 0.9rem;
+}
+
+.crypto-table th,
+.crypto-table td {
+    padding: 0.75rem;
+    text-align: center;
+    vertical-align: middle;
+    border-bottom: 1px solid #333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.crypto-table th {
+    background-color: #1a1a1a;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.crypto-table tbody tr {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.crypto-table tbody tr:hover {
+    background-color: #252525;
+    transform: translateY(-2px);
+}
+
+.crypto-table .trust-score {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.crypto-table .anomaly-status {
+    font-weight: bold;
+}
+
+.crypto-table .trading-incentive {
+    text-transform: capitalize;
+}
+
+/* Buttons */
+#website-button, #paper-button, #code-button, #forum-button {
+    color: #ecf0f1;
+    font-size: 17px;
+    background-color: #d35400;
+    border: 1px solid #e67e22;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 7px;
+    box-shadow: 0px 6px 0px #b03a2e;
+    transition: all 0.1s;
+}
+
+#website-button:active, #paper-button:active, #code-button:active, #forum-button:active {
+    box-shadow: 0px 2px 0px #b03a2e;
+    position: relative;
+    top: 2px;
+}
+
+.trade-button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    width: 100%;
+    max-width: 250px;
+}
+
+.trade-button:hover {
+    background-color: #45a049;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    transform: translateY(-3px);
+}
+
+.trade-button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    transform: translateY(1px);
+}
+
+.table-trade-button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.table-trade-button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+.table-trade-button:active {
+    background-color: #3e8e41;
+    transform: translateY(1px);
+}
+
+/* News Slider */
+
+.news-slider {
+    position: relative;
+    width: 100%;
+    margin: 2rem 0;
+    padding: 0 60px;
+    overflow: hidden; 
+}
+
+.news-container {
+    overflow: visible;
+}
+
+.news-articles {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+.news-article {
+    flex: 0 0 calc(33.333% - 40px);
+    margin: 0 20px;
+    background-color: #222;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease; /* Add opacity transition */
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+}
+
+.news-article.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+.news-article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.news-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.news-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.news-title {
+    font-size: 1.2rem;
+    color: #66b3ff;
+    text-decoration: none;
+    margin-bottom: 15px;
+    display: -webkit-box;
+    display: box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+    overflow: hidden;
+    flex-grow: 1;
+}
+
+.news-title:hover {
+    text-decoration: underline;
+}
+
+.news-publisher {
+    font-size: 1rem;
+    color: #999;
+    margin-top: auto;
+    margin-bottom: 10px;
+}
+
+.news-time {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 2.5rem;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.slider-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.left-arrow {
+    left: 0;
+}
+
+.right-arrow {
+    right: 0;
+}
+@media (max-width: 1200px) {
+    .news-article {
+        flex: 0 0 calc(50% - 40px);
+    }
+}
+
+@media (max-width: 768px) {
+    .news-slider {
+        padding: 0 40px;
+    }
+    
+    .news-article {
+        flex: 0 0 calc(100% - 40px);
+    }
+}
+
+/* Extra Content */
+#extra-content {
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    padding: 2rem;
+    margin-top: 2rem;
+    line-height: 1.6;
+}
+
+/* Footer */
+footer {
+    background-color: black;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 1200px) {
+    .news-article {
+        flex: 0 0 calc(50% - 40px);
+    }
+}
+
+@media (max-width: 768px) {
+    .crypto-container {
+        flex-direction: column;
+    }
+
+    .crypto-table {
+        font-size: 0.8rem;
+    }
+
+    .crypto-table th,
+    .crypto-table td {
+        padding: 0.5rem;
+    }
+}
+
+.news-article.invisible-article {
+    visibility: hidden;
+}
+.about-section {
+    margin-top: 2rem;
+  }
+  
+  .about-section h2 {
+    color: #e0e0e0;
+    margin-bottom: 1rem;
+  }
+  
+  .about-container {
+    
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .about-container p {
+    color: #b0b0b0;
+    line-height: 1.6;
+  }
+  .crypto-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+#crypto-image {
+    width: 40px;
+    height: 40px;
+    margin-top: 5px; 
+}
+
+.crypto-title {
+    display: flex;
+    flex-direction: column;
+}
+
+.crypto-title h1 {
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.crypto-title h2 {
+    margin-top: 0;
+}
+
+/* logo */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    max-height: 50px; 
+    width: auto;
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Price Tracker</title>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="images/logo_2-removebg-preview.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/logo_2-removebg-preview.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/logo_2-removebg-preview.png">
+    <link rel="manifest" href="path/to/site.webmanifest">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo_2.png" alt="Crypto Price Tracker Logo" class="logo-image" id="website-logo">
+            </div>
+            <div class="nav-links">
+                <a href="#" id="home-tab">Home</a>
+                <a href="#" id="trending-tab">Trending</a>
+                <a href="#" id="news-tab">News</a>
+                <a href="#" id="watchlist-tab">Watchlist</a>
+                <a href="#" id="about-tab">About</a>
+            </div>
+            <div class="search">
+                <form id="search-form">
+                    <input id="search-input" placeholder="Search..." type="text">
+                    <button type="submit">Go</button>
+                </form>
+            </div>
+            
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="live-prices">
+                <h2>Featured Coins</h2>
+                <div class="price-cards-div" id="featured-coins-container">
+                    <!-- Live Price TAb here -->
+                </div>
+            </div>
+            <div class="crypto-performance">
+                <div class="top-performers">
+                    <h3>Best Performers this week</h3>
+                    <table class="crypto-table">
+                        <thead>
+                            <tr>
+                                <th class="rank-col">Rank</th>
+                                <th class="name-col">Name</th>
+                                <th class="price-col">Price</th>
+                                <th class="change-col">7d Change</th>
+                            </tr>
+                        </thead>
+                        <tbody id="top-crypto-container"></tbody>
+                    </table>
+                </div>
+                <div class="bottom-performers">
+                    <h3>Worst Performers this week</h3>
+                    <table class="crypto-table">
+                        <thead>
+                            <tr>
+                                <th class="rank-col">Rank</th>
+                                <th class="name-col">Name</th>
+                                <th class="price-col">Price</th>
+                                <th class="change-col">7d Change</th>
+                            </tr>
+                        </thead>
+                        <tbody id="bottom-crypto-container"></tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="news">
+                <h2>Crypto News</h2>
+                <div class="news-slider">
+                    <button class="slider-arrow left-arrow">&lt;</button>
+                    <div class="news-container">
+                        <div class="news-articles" id="news-box">
+                            <!-- News appended here!!!!AAAA -->
+                        </div>
+                    </div>
+                    <button class="slider-arrow right-arrow">&gt;</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 CryptoTracker | All Rights Reserved</p>
+        </div>
+    </footer>
+</body>
+<script src="config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+
+</html>
