@@ -323,12 +323,12 @@ function fetchBestCrypto()
 
                  function createCryptoRow(crypto, rank, isTop) {
                     const row = document.createElement('tr');
-                    const changeColor = crypto.price_change_24h >= 0 ? 'green' : 'red';
+                    const changeColor = crypto.price_change_percentage_week >= 0 ? 'green' : 'red';
                     
                     
                     const priceChangeFormatted = crypto.price_change_24h.toFixed(2);
                     
-                    const percentageChangeFormatted = crypto.price_change_24h.toFixed(2);
+                    const percentageChangeFormatted = crypto.price_change_percentage_week.toFixed(2);
                     
                     row.innerHTML = `
                         <td class="rank-col">#${rank}</td>
