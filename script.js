@@ -325,24 +325,24 @@ function fetchBestCrypto()
                     const row = document.createElement('tr');
                     const changeColor = crypto.price_change_percentage_week >= 0 ? 'green' : 'red';
                     
+                    const priceChange7d = crypto.current_price * (crypto.price_change_percentage_week / 100);
+
+                    const priceChangeFormatted = priceChange7d.toFixed(2);
+    const percentageChangeFormatted = crypto.price_change_percentage_week.toFixed(2);
                     
-                    const priceChangeFormatted = crypto.price_change_24h.toFixed(2);
-                    
-                    const percentageChangeFormatted = crypto.price_change_percentage_week.toFixed(2);
-                    
-                    row.innerHTML = `
-                        <td class="rank-col">#${rank}</td>
-                        <td class="name-col">
-                            <img src="${crypto.image}" alt="${crypto.name} logo" class="crypto-icon">
-                            <span class="crypto-name">${crypto.name}</span>
-                            <span class="crypto-symbol">${crypto.symbol}</span>
-                        </td>
-                        <td class="price-col">₹${crypto.current_price ? crypto.current_price.toLocaleString('en-IN', {minimumFractionDigits: 2, maximumFractionDigits: 2}) : 'N/A'}</td>
-                        <td class="change-col" style="color: ${changeColor};">
-                            ${priceChangeFormatted} (${percentageChangeFormatted}%)
-                        </td>
-                    `;
-                    return row;
+    row.innerHTML = `
+    <td class="rank-col">#${rank}</td>
+    <td class="name-col">
+        <img src="${crypto.image}" alt="${crypto.name} logo" class="crypto-icon">
+        <span class="crypto-name">${crypto.name}</span>
+        <span class="crypto-symbol">${crypto.symbol}</span>
+    </td>
+    <td class="price-col">₹${crypto.current_price ? crypto.current_price.toLocaleString('en-IN', {minimumFractionDigits: 2, maximumFractionDigits: 2}) : 'N/A'}</td>
+    <td class="change-col" style="color: ${changeColor};">
+        ${priceChangeFormatted} (${percentageChangeFormatted}%)
+    </td>
+`;
+return row;
                 }
 }
 
